@@ -6,13 +6,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Cover Template · Bootstrap</title>
+    <title>Cover Gallery</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
 
     <!-- Bootstrap core CSS -->
 <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 
     <style>
       .bd-placeholder-img {
@@ -46,25 +45,110 @@
     </div>
   </header>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+
+  /* The grid: Four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .column img:hover {
+    opacity: 1;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* The expanding image container */
+  .container {
+    position: relative;
+    display: none;
+  }
+
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  </style>
+  </head>
+  <body>
+<div style="text-align:center">
+    <h2>Behind the scene</h2>
+  </div>
+
+  <!-- The four columns -->
+  <div class="row">
+    <div class="column">
+      <img src="https://imgs.aftonbladet-cdn.se/v2/images/f2539947-651b-4b39-ba5e-71e48a5899ae?fit=crop&h=480&q=50&w=795&s=66ef90c82bdf4ebdef8025f8926980bf3738250c" alt="Jerry & Mikael Persbrandt" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="https://www.videostatic.com/sites/default/files/styles/post/public/abidaz_game.jpg?itok=8gkG2ndC" alt="Abidaz" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="https://i.ytimg.com/vi/_FiC7K5GNIM/maxresdefault.jpg" alt="Råknas" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="https://i.ytimg.com/vi/VBvhqi-D9KQ/maxresdefault.jpg" alt="Title" style="width:100%" onclick="myFunction(this);">
+    </div>
+  </div>
+  <div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+  </div>
+
+  <script>
+  function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+  }
+  </script>
+
+  </body>
   <style>
 body {
 background-image: url("http://www.stargconstruction.com/wp-content/uploads/2015/03/wood-background-tumblr-octuq4rq.jpg");
 }
 </style>
 </head>
-  <main role="main" class="inner cover">
-    <h1 class="cover-heading">Behind the scene.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-    </p>
-  </main>
 
-  <footer class="mastfoot mt-auto">
-    <div class="inner">
-      <p>Cover template from <a href="https://getbootstrap.com/">Bootstrap</a>, social media <a href="https://www.instagram.com/thesc7/?hl=en">@thesc7</a>.</p>
-    </div>
-  </footer>
-</div>
 </body>
 </html>
