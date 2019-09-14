@@ -1,0 +1,17 @@
+h6 {
+  font-family: arial;
+  color: grey;
+}
+.nav-link {
+  font-family: copperplate;
+  color: white;
+  text-transform: lowercase;
+}
+
+body {
+  background-image: url(Screenshot2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
